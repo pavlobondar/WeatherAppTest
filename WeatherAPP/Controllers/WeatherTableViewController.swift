@@ -47,6 +47,8 @@ final class WeatherTableViewController: UITableViewController {
             let cell = ForecastCell(style: .subtitle, reuseIdentifier: nil)
             cell.viewModel = cellViewModel
             return cell
+        default:
+            return UITableViewCell()
         }
     }
     

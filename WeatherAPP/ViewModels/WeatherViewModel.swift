@@ -41,8 +41,11 @@ final class WeatherViewModel: ViewModelProtocol {
         }
     }
     
-    func headerType(for indexPath: IndexPath) -> HeaderType {
-        sectionData[indexPath.section].type
+    func headerType(for indexPath: IndexPath) -> HeaderType? {
+        guard sectionData.indices.contains(indexPath.section) else {
+            return nil
+        }
+        return sectionData[indexPath.section].type
     }
     
     func getCellViewModel(for indexPath: IndexPath) -> ViewModelProtocol {

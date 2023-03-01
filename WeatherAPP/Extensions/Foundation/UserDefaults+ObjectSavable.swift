@@ -25,23 +25,23 @@ enum ObjectSavableError: String, LocalizedError {
 extension UserDefaults: ObjectSavable {
     
     func setObject<Object>(_ object: Object) throws where Object: Encodable {
-            let encoder = JSONEncoder()
-            do {
-                let data = try encoder.encode(object)
-                set(data, forKey: String(describing: Object.self))
-            } catch {
-                throw ObjectSavableError.unableToEncode
-            }
+        let encoder = JSONEncoder()
+        do {
+            let data = try encoder.encode(object)
+            set(data, forKey: String(describing: Object.self))
+        } catch {
+            throw ObjectSavableError.unableToEncode
         }
-        
-        func getObject<Object>(castTo type: Object.Type) throws -> Object where Object: Decodable {
-            guard let data = data(forKey: String(describing: Object.self)) else { throw ObjectSavableError.noValue }
-            let decoder = JSONDecoder()
-            do {
-                let object = try decoder.decode(type, from: data)
-                return object
-            } catch {
-                throw ObjectSavableError.unableToDecode
-            }
+    }
+    
+    func getObject<Object>(castTo type: Object.Type) throws -> Object where Object: Decodable {
+        guard let data = data(forKey: String(describing: Object.self)) else { throw ObjectSavableError.noValue }
+        let decoder = JSONDecoder()
+        do {
+            let object = try decoder.decode(type, from: data)
+            return object
+        } catch {
+            throw ObjectSavableError.unableToDecode
         }
+    }
 }
