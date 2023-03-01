@@ -8,8 +8,9 @@
 import Foundation
 
 enum HeaderType: String {
-   case loction = "LOCATION"
-   case forecast = "FORECAST"
+    case loction = "LOCATION"
+    case forecast = "FORECAST"
+    case empty = ""
 }
 
 struct SectionViewModel {

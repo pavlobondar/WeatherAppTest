@@ -10,7 +10,9 @@ import Foundation
 final class WeatherViewModel: ViewModelProtocol {
     
     private var weatherRepository: WeatherRepository!
-    private(set) var sectionData: [SectionViewModel] = [] {
+    private(set) var sectionData: [SectionViewModel] = [
+        SectionViewModel(type: .empty, items: [EmptyViewModel()])
+    ] {
         didSet {
             self.bindWeatherViewModelToController?()
         }

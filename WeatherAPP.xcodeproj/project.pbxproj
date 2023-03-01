@@ -32,6 +32,8 @@
 		52A7343729AE812100133D82 /* LocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A7343629AE812100133D82 /* LocationCell.swift */; };
 		52A7343B29AF2CD800133D82 /* UserDefaults+ObjectSavable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A7343A29AF2CD800133D82 /* UserDefaults+ObjectSavable.swift */; };
 		52A7344329AF387900133D82 /* WeatherAPPTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A7344229AF387900133D82 /* WeatherAPPTests.swift */; };
+		52A7344A29AF86CB00133D82 /* EmptyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A7344929AF86CB00133D82 /* EmptyViewModel.swift */; };
+		52A7344C29AF87F600133D82 /* EmptyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A7344B29AF87F600133D82 /* EmptyCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +75,8 @@
 		52A7343A29AF2CD800133D82 /* UserDefaults+ObjectSavable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+ObjectSavable.swift"; sourceTree = "<group>"; };
 		52A7344029AF387900133D82 /* WeatherAPPTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeatherAPPTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		52A7344229AF387900133D82 /* WeatherAPPTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherAPPTests.swift; sourceTree = "<group>"; };
+		52A7344929AF86CB00133D82 /* EmptyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyViewModel.swift; sourceTree = "<group>"; };
+		52A7344B29AF87F600133D82 /* EmptyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,6 +195,7 @@
 				52A7341029AE48A100133D82 /* WeatherViewModel.swift */,
 				52A7341529AE50E000133D82 /* ForecastViewModel.swift */,
 				52A7341729AE592C00133D82 /* LocationViewModel.swift */,
+				52A7344929AF86CB00133D82 /* EmptyViewModel.swift */,
 				52A7343229AE7DF400133D82 /* SectionViewModel.swift */,
 			);
 			path = ViewModels;
@@ -210,6 +215,7 @@
 			children = (
 				52A7343629AE812100133D82 /* LocationCell.swift */,
 				52A7342829AE6B8500133D82 /* ForecastCell.swift */,
+				52A7344B29AF87F600133D82 /* EmptyCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -353,8 +359,10 @@
 				52A7341829AE592C00133D82 /* LocationViewModel.swift in Sources */,
 				52A7340929AE372D00133D82 /* WeatherStorage.swift in Sources */,
 				52A7343729AE812100133D82 /* LocationCell.swift in Sources */,
+				52A7344A29AF86CB00133D82 /* EmptyViewModel.swift in Sources */,
 				52A7341129AE48A100133D82 /* WeatherViewModel.swift in Sources */,
 				52A7340529AE303D00133D82 /* DataLoader.swift in Sources */,
+				52A7344C29AF87F600133D82 /* EmptyCell.swift in Sources */,
 				52A7343129AE6C8100133D82 /* UITableView+Register.swift in Sources */,
 				52A733DC29AE294E00133D82 /* AppDelegate.swift in Sources */,
 				52A7343529AE7EF700133D82 /* ViewModelProtocol.swift in Sources */,

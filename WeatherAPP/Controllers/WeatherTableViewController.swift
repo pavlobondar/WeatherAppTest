@@ -39,6 +39,10 @@ final class WeatherTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cellViewModel = viewModel.getCellViewModel(for: indexPath)
         switch viewModel.headerType(for: indexPath) {
+        case .empty:
+            let cell = EmptyCell(style: .subtitle, reuseIdentifier: nil)
+            cell.viewModel = cellViewModel
+            return cell
         case .loction:
             let cell = LocationCell(style: .subtitle, reuseIdentifier: nil)
             cell.viewModel = cellViewModel
